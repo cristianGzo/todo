@@ -4,6 +4,7 @@ export default class Modal{
         this.title = document.getElementById('modal-title');
         this.description = document.getElementById('modal-description');
         this.btn = document.getElementById('modal-btn');
+        this.date= document.getElementById('modal-date');
         this.completed = document.getElementById('modal-completed');
         this.alert= new Alert('modal-alert');
         this.todo= null;
@@ -14,6 +15,7 @@ export default class Modal{
         this.todo=todo;
         this.title.value=todo.title;
         this.description.value=todo.description;
+        this.date.value=todo.date;
         this.completed.checked=todo.completed;
     }
 
@@ -28,6 +30,7 @@ export default class Modal{
                 callback(this.todo.id, {
                     title: this.title.value,
                     description: this.description.value,
+                    date: this.date.value,
                     completed: this.completed.checked,
 
                 });

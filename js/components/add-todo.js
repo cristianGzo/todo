@@ -20,12 +20,12 @@ export default class AddTodo{
                   this.alert.show('Title and description are required');
             }else{
                 this.alert.hide();
-                flatpickr(this.date, {
+              /*  flatpickr(this.date, {
                     dateFormat: "d/m/Y", // Formato de la fecha
                     minDate: "today", // Fecha mínima seleccionable
                     defaultDate: "today", // Fecha por defecto
                     disableMobile: true // Desactiva el modo móvil
-                });
+                });*/
                 callback(this.title.value, this.description.value, this.date.value);
             }
         }

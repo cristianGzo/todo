@@ -66,8 +66,9 @@ export default class View{
        this.model.editTodo(id, values);
        const row =document.getElementById(id);
        row.children[0].innerText= values.title;
-       row.children[1].innerText= values.description;
+       row.children[1].innerText= values.description;  
        row.children[2].children[0].checked= values.completed;
+       row.children[3].innerText= values.date;
     }
 
     removeTodo(id){
@@ -130,6 +131,7 @@ export default class View{
             title: row.children[0].innerText,
             description: row.children[1].innerText,
             completed: row.children[2].children[0].checked,
+            date: row.children[3].innerText,
         });
         row.children[4].appendChild(editBtn);
 
